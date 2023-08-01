@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 5000;
+const port = process.env.PORT || 5000; // Usando a variável de ambiente PORT ou 5000 como padrão
 const connectToDatabase = require('./db');
 const authMiddleware = require('./helpers/authMiddleware');
 const cors = require('cors');
