@@ -1,6 +1,8 @@
 const express = require('express');
 const app = express();
-const port = process.env.PORT || 5000; // Usando a variável de ambiente PORT ou 5000 como padrão
+require("dotenv").config()
+
+const port = process.env.port || 5000;
 const connectToDatabase = require('./db');
 const authMiddleware = require('./helpers/authMiddleware');
 const cors = require('cors');
